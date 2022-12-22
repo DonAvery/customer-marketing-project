@@ -22,33 +22,39 @@ Several models were used in this Jupyter Notebook:
 - Ensemble and Random Forest - tuned `n_estimators`, `max_depth` and `min_samples_leaf`
 - XGBoost - tuned `num_boost_rounds`, `eta`, `max_depth` and `min_child_weight`
 
-## To run the project
+## Run the Project
 
 Create a folder where you will clone the GitHub repository into
 
-Clone this repository
+Clone this repository `git clone https://github.com/DonAvery/customer-marketing-project`
 
+`cd customer-marketing-project/files`
 
 Run `conda env create -f environment.yml'
 
-Use the requirements.txt to install dependencies
+`conda activate eval`
 
-Change directory to the customer-marketing-project folder
+If you don't yet have Docker installed then you will have to install it using `pip install docker`
 
-Start a Jupyter notebook and open "Data-Prep-Clean-EDA.ipynb" to view the data ingestion, data prep and EDA.
+
+I have also uploaded a requirements.txt you might need on a Windows system.
+
+cd back to the customer marketing project and start the notebook service `jupyter notebook`.
+
+Change folders in the notebook service to notebooks and open "Data-Prep-Clean-EDA.ipynb" to view the data ingestion, data prep and EDA.
 
 Open the "Model-Training-Tuning-and-Selection.ipynb" to see the tuning and training.
 
-The Best Model & BentoML Save.ipynb is what I created a python script from. You can either run this notebook or run the customer-marketing.py file to create the bentoml model.
+The Best Model & BentoML Save.ipynb is what I created a python script from.
 
-When ready for deployment run the Best Model & BentoML Save notebook.
+## Deployment and Testing
 
-After running the BentoML notebook you can start setting up the deployment.
+Change into the "files" directory and run `python3 train.py`, which will create the BentoML model.
 
-Run `bentoml build` inside the folder with the files from the files directory.
+Run `bentoml build` inside the files folder. Upon completetion you should see "Successfully build Bento(tag="cust_marketing_classifier:shqowjebwkeyypd2"). The tag will actually be something different for you.conda 
 
 Run `bentoml containerize <tag>` the tag will be given to you after the build.
 
 Run `docker run -it --rm -p 3000:3000 <tag> serve --production`, this line will be given after docker run, copy and paste it.
 
-Copy the json from the locustfile.py and use http://0.0.0.0:8089 to post that json file into the get portion of the page and see the results.
+Copy the json from the client.py and use http://0.0.0.0:8089 to post that json file into the get portion of the page and see the results.
