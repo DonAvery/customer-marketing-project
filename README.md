@@ -27,7 +27,13 @@ Clone this repository
 
 Use the requirements.txt to install dependencies
 
-Run the customer-marketing notebook for the EDA, model training and parameter tuning.
+Change directory to the customer-marketing-project folder
+
+Start a jupyter notebook and open "Data-Prep-Clean-EDA.ipynb" to view the data ingestion, data prepe and EDA.
+
+Open the "Model-Training-Tuning-and-Selection.ipynb" to see the tuning and training.
+
+The Best Model & BentoML Save.ipynb is what I created a python script from. You can either run this notebook or run the customer-marketing.py file to create the benmol model.
 
 When ready for deployment run the Best Model & BentoML Save notebook.
 
