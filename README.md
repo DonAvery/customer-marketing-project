@@ -1,6 +1,9 @@
 # Markeing Promotion Classifier
 This repsoitory contains all the necessary information to run a classification model. Using Jupyter Notebooks, python scripts, BentoML and docker allow you to access and test this information.  It is also part of my ML-Zoomcamp Capstone Project.
 
+## Environment
+I run my machine learning proejcts on a standalone Ubuntu PC using conda. These instructions are meant for an Ubuntu system and I believe they should work on macOS. I have included items so that you may create them on a Windows machine, but I can't guarntee they will work.
+
 ## Data and Inention
 
 The dataset was pulled from Kaggle here: https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign
@@ -21,9 +24,12 @@ Several models were used in this Jupyter Notebook:
 
 ## To run the project
 
-Create a virtual environment on your machine and activate
+Create a folder where you will clone the github repository into
 
 Clone this repository
+
+
+Run `conda env create -f environment.yml'
 
 Use the requirements.txt to install dependencies
 
