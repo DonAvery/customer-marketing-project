@@ -57,4 +57,8 @@ Run `bentoml containerize <tag>` the tag will be given to you after the build.
 
 Run `docker run -it --rm -p 3000:3000 <tag> serve --production`, this line will be given after docker run, copy and paste it.
 
-Copy the json from the client.py and use http://0.0.0.0:8089 to post that json file into the get portion of the page and see the results.
+Run `locust.py` and there will be a link to click on or right click and "open link" or just copy and paste this into your browser "http://localhost:3000/".
+
+In the webpage click on "POST", then click on "Try it out", copy the contents of the client.py file and paste it into the "Request body" box pasting over anything that is in there.  This is a json format so there should be curly brackets opening and closing with the data inside, i.e. {}.
+
+Now the data is ready to be sent to the model for a prediction.  Click the "Execute" button and you will see a response, the "Response body" box should contain a "status": "Not acceptable to promotion".
