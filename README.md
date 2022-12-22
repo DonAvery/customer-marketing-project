@@ -14,6 +14,10 @@ Several models were used in this Jupyter Notebook:
 - Ensemble and Random Forest
 - XGBoost
 
+## Model Parameter Tuning
+- Decision Tree - tuned max_depth and min_samples_leaf
+- Ensemble and Random Forest - tuned n_estimators, max_depth and min_samples_leaf
+- XGBoost - tuned num_boost_rounds, eta, max_depth and `min_child_weight`
 
 ## To run the project
 
