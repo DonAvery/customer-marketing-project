@@ -51,7 +51,7 @@ The Best Model & BentoML Save.ipynb is what I created a python script from.
 
 Change into the "files" directory and run `python3 train.py`, which will create the BentoML model.
 
-Run `bentoml build` inside the files folder. Upon completetion you should see "Successfully build Bento(tag="cust_marketing_classifier:shqowjebwkeyypd2"). The tag will actually be something different for you.conda 
+Run `bentoml build` inside the files folder. Upon completetion you should see "Successfully build Bento(tag="cust_marketing_classifier:shqowjebwkeyypd2"). The tag will actually be something different for you. 
 
 Run `bentoml containerize <tag>` the tag will be given to you after the build.
 
